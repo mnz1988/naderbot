@@ -17,7 +17,7 @@ export default function Home() {
   const [isChannelMember, setIsChannelMember] = useState<boolean | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [telegramId, setTelegramId] = useState<string | null>(null)
-  const [channelUsername, setChannelUsername] = useState('@taraah_net')
+  const [channelUsername, setChannelUsername] = useState('@markazilifesaving')
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
@@ -98,7 +98,7 @@ export default function Home() {
         light:text-gray-800 dark:text-gray-100 "
       >برای مشاهده گروه های تخفیفی، ابتدا در کانال رسمی هیات نجات غریق و غواصی استان مرکزی عضو شوید</h1>
       <br/>
-      <a href='https://t.me/taraah_net' className='text-xl font-medium light:text-gray-800 dark:text-gray-100'>@markazilifesaving 
+      <a href='https://t.me/markazilifesaving' className='text-xl font-medium light:text-gray-800 dark:text-gray-100'>@markazilifesaving 
       <span className="inline-flex items-baseline">
       <Image src={myImageExternalLink} alt="link" className="mx-1 size-4 self-center" />
       </span>
@@ -118,7 +118,7 @@ export default function Home() {
       {isChannelMember !== null && !isLoading && (
         <p className="mt-4 text-xl light:text-gray-800 dark:text-gray-100 items-center justify-center">
           {isChannelMember
-            ? <a href='https://t.me/taraah_net'><button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full">ورود به گروه تخفیفات</button></a>
+            ? <a href='https://t.me/+Pqgs-4FUmQlkMTA0'><button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full">ورود به گروه تخفیفات</button></a>
             : "شما عضو کانال نیستید، پس از عضویت دوباره تلاش کنید "}
         </p>
       )}
