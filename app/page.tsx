@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import myImageExternalLink from 'external-link.png'
 import myImageBot from 'bot.png'
+import Image from 'next/image'
 
 declare global {
   interface Window {
@@ -92,7 +93,7 @@ export default function Home() {
       <h1 className="text-3xl font-bold mb-8 items-center justify-center light:text-gray-800 dark:text-gray-100 ">برای عضویت در گروه های تخفیفی ویژه نجات غریقان و غواصان استان مرکزی ابتدا در کانال رسمی عضو شوید</h1>
       <p/>
       <a href='https://t.me/taraah_net' className='light:text-gray-800 dark:text-gray-100'>@markazilifesaving 
-        <span><img src="external-link.png" alt="link" className="mb-4" width={14} height={14} /></span>
+      <Image src={myImageExternalLink} alt="link" className="mb-4" width={14} height={14} />
       </a>
       <br/>
       <p className="text-xl light:text-gray-800 dark:text-gray-100">پس از عضویت دکمه بررسی را بزنید</p>
@@ -106,10 +107,10 @@ export default function Home() {
       </button>
       {error && <p className="mt-4 text-red-500">{error}</p>}
       {isChannelMember !== null && !isLoading && (
-        <p className="mt-4 text-xl light:text-gray-800 dark:text-gray-100">
+        <p className="mt-4 text-xl light:text-gray-800 dark:text-gray-100 items-center justify-center">
           {isChannelMember
             ? "شما عضو کانال هستید"
-            : "شما عضو کانال نیستید، دپس از عضویت دوباره تلاش کنید "}
+            : "شما عضو کانال نیستید، پس از عضویت دوباره تلاش کنید "}
         </p>
       )}
     </main>
