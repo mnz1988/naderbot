@@ -88,15 +88,13 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4">
       <h1 className="text-4xl font-bold mb-8">برای عضویت در گروه های تخفیفی ویژه نجات غریقان و غواصان استان مرکزی ابتدا در کانال رسمی عضو شوید</h1>
+      <a href='https://t.me/taraah_net' >@markazilifesaving</a>
       <p className="text-xl">پس از عضویت دکمه بررسی را بزنید</p>
-      <a href='https://t.me/taraah_net' >
-      {/* @markazilifesaving */}
-        <input disabled type="text" value={channelUsername}
-          onChange={(e) => setChannelUsername(e.target.value)}
-          placeholder="یوزرنیم کانال (مثال: @example)"
-          className="mb-4 p-2 border border-gray-300 rounded w-full max-w-xs"
-          /> 
-        </a>
+      {/* <input disabled type="text" value={channelUsername}
+        onChange={(e) => setChannelUsername(e.target.value)}
+        placeholder="یوزرنیم کانال (مثال: @example)"
+        className="mb-4 p-2 border border-gray-300 rounded w-full max-w-xs"
+      /> */}
       <button
         onClick={checkChannelMembership}
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
