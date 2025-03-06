@@ -95,10 +95,10 @@ export default function Home() {
       <h1 className="text-2xl font-bold mb-4 mx-auto light:text-gray-800 dark:text-gray-100 ">برای عضویت در گروه های تخفیفی ویژه نجات غریقان و غواصان استان مرکزی ابتدا در کانال رسمی عضو شوید</h1>
       <p/>
       <a href='https://t.me/taraah_net' className='light:text-gray-800 dark:text-gray-100'>@markazilifesaving 
-        <span>
-          <Image src={myImageExternalLink} alt="link" className="mb-4" width={14} height={14} />
-        </span>
       </a>
+      <span>
+        <Image src={myImageExternalLink} alt="link" className="mb-4" width={14} height={14} />
+      </span>
       <br/>
       <p className="text-xl light:text-gray-800 dark:text-gray-100">پس از عضویت دکمه بررسی را بزنید</p>
       <br/>
