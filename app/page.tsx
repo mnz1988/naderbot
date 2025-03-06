@@ -1,8 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import myImageExternalLink from 'external-link.png'
-import myImageBot from 'bot.png'
+import myImageExternalLink from './external-link.png'
+import myImageBot from './bot.png'
 import Image from 'next/image'
 
 declare global {
@@ -81,6 +81,7 @@ export default function Home() {
   if (!telegramId) {
     return (
       <main className="flex min-h-screen flex-col items-center justify-center p-4">
+        <Image src={myImageBot} alt="bot" className="mb-4" width={100} height={100} />
         <h1 className="text-4xl font-bold mb-8"> هیات نجات غریق و غواصی استان مرکزی
         </h1>
         <p className="text-xl">این ربات برای استفاده به عنوان مینی اپ تلگرامی طراحی شده است</p>
@@ -90,6 +91,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4 light:bg-gray-100 dark:bg-gray-800">
+      <Image src={myImageBot} alt="bot" className="mb-4 " width={100} height={100} />
       <h1 className="text-3xl font-bold mb-8 items-center justify-center light:text-gray-800 dark:text-gray-100 ">برای عضویت در گروه های تخفیفی ویژه نجات غریقان و غواصان استان مرکزی ابتدا در کانال رسمی عضو شوید</h1>
       <p/>
       <a href='https://t.me/taraah_net' className='light:text-gray-800 dark:text-gray-100'>@markazilifesaving 
