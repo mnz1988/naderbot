@@ -14,7 +14,7 @@ export default function Home() {
   const [isChannelMember, setIsChannelMember] = useState<boolean | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [telegramId, setTelegramId] = useState<string | null>(null)
-  const [channelUsername, setChannelUsername] = useState('@markazilifesaving')
+  const [channelUsername, setChannelUsername] = useState('@taraah_net')
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
@@ -78,7 +78,7 @@ export default function Home() {
   if (!telegramId) {
     return (
       <main className="flex min-h-screen flex-col items-center justify-center p-4">
-        <h1 className="text-4xl font-bold mb-8">بررسی عضویت در کانال تلگرامی هیات نجات غریق و غواصی استان مرکزی
+        <h1 className="text-4xl font-bold mb-8"> هیات نجات غریق و غواصی استان مرکزی
         </h1>
         <p className="text-xl">این ربات برای استفاده به عنوان مینی اپ تلگرامی طراحی شده است</p>
       </main>
@@ -87,15 +87,17 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4">
-      <h1 className="text-4xl font-bold mb-8">بررسی عضویت در کانال</h1>
-      <input disabled type="text" value={channelUsername}
+      <h1 className="text-4xl font-bold mb-8">برای عضویت در گروه های تخفیفی ویژه نجات غریقان و غواصان استان مرکزی ابتدا در کانال رسمی عضو شوید</h1>
+      <link href='https://t.me/taraah_net' >@markazilifesaving</link>
+      <p className="text-xl">پس از عضویت دکمه بررسی را بزنید</p>
+      {/* <input disabled type="text" value={channelUsername}
         onChange={(e) => setChannelUsername(e.target.value)}
         placeholder="یوزرنیم کانال (مثال: @example)"
         className="mb-4 p-2 border border-gray-300 rounded w-full max-w-xs"
-      />
+      /> */}
       <button
         onClick={checkChannelMembership}
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
         disabled={isLoading || !channelUsername}
       >
         {isLoading ? 'در حال بررسی...' : 'بررسی عضویت'}
@@ -105,7 +107,7 @@ export default function Home() {
         <p className="mt-4 text-xl">
           {isChannelMember
             ? "شما عضو کانال هستید"
-            : "شما عضو کانال نیستید"}
+            : "شما عضو کانال نیستید، دپس از عضویت دوباره تلاش کنید "}
         </p>
       )}
     </main>
