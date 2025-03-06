@@ -96,7 +96,7 @@ export default function Home() {
       <p/>
       <a href='https://t.me/taraah_net' className='light:text-gray-800 dark:text-gray-100'>@markazilifesaving 
       <span className="inline-flex items-baseline">
-      <Image src={myImageExternalLink} alt="link" className="mx-1 size-14 self-center" />
+      <Image src={myImageExternalLink} alt="link" className="mx-1 size-7 self-center" />
       </span>
       </a>
 
