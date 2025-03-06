@@ -1,5 +1,5 @@
 {
-  "name": "26-check-channel-members",
+  "name": "check-channel-members",
   "version": "0.1.0",
   "private": true,
   "scripts": {

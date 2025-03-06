@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import myImageExternalLink from 'external-link.png'
+import myImageBot from 'bot.png'
 
 declare global {
   interface Window {
@@ -87,14 +89,18 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4">
-      <h1 className="text-4xl font-bold mb-8">برای عضویت در گروه های تخفیفی ویژه نجات غریقان و غواصان استان مرکزی ابتدا در کانال رسمی عضو شوید</h1>
-      <a href='https://t.me/taraah_net' >@markazilifesaving</a>
+      <h1 className="text-3xl font-bold mb-8 items-center justify-center">برای عضویت در گروه های تخفیفی ویژه نجات غریقان و غواصان استان مرکزی ابتدا در کانال رسمی عضو شوید</h1>
+      <p/>
+      <a href='https://t.me/taraah_net' >@markazilifesaving 
+        <span><img src="app/external-link.png" alt="link" className="mb-4" width={14} height={14} /></span>
+      </a>
       <p className="text-xl">پس از عضویت دکمه بررسی را بزنید</p>
       {/* <input disabled type="text" value={channelUsername}
         onChange={(e) => setChannelUsername(e.target.value)}
         placeholder="یوزرنیم کانال (مثال: @example)"
         className="mb-4 p-2 border border-gray-300 rounded w-full max-w-xs"
       /> */}
+      <br/>
       <button
         onClick={checkChannelMembership}
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
