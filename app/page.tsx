@@ -88,18 +88,14 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-4">
-      <h1 className="text-3xl font-bold mb-8 items-center justify-center">برای عضویت در گروه های تخفیفی ویژه نجات غریقان و غواصان استان مرکزی ابتدا در کانال رسمی عضو شوید</h1>
+    <main className="flex min-h-screen flex-col items-center justify-center p-4 light:bg-gray-100 dark:bg-gray-800">
+      <h1 className="text-3xl font-bold mb-8 items-center justify-center light:text-gray-800 dark:text-gray-100 ">برای عضویت در گروه های تخفیفی ویژه نجات غریقان و غواصان استان مرکزی ابتدا در کانال رسمی عضو شوید</h1>
       <p/>
-      <a href='https://t.me/taraah_net' >@markazilifesaving 
-        <span><img src="app/external-link.png" alt="link" className="mb-4" width={14} height={14} /></span>
+      <a href='https://t.me/taraah_net' className='light:text-gray-800 dark:text-gray-100'>@markazilifesaving 
+        <span><img src="external-link.png" alt="link" className="mb-4" width={14} height={14} /></span>
       </a>
-      <p className="text-xl">پس از عضویت دکمه بررسی را بزنید</p>
-      {/* <input disabled type="text" value={channelUsername}
-        onChange={(e) => setChannelUsername(e.target.value)}
-        placeholder="یوزرنیم کانال (مثال: @example)"
-        className="mb-4 p-2 border border-gray-300 rounded w-full max-w-xs"
-      /> */}
+      <br/>
+      <p className="text-xl light:text-gray-800 dark:text-gray-100">پس از عضویت دکمه بررسی را بزنید</p>
       <br/>
       <button
         onClick={checkChannelMembership}
@@ -110,7 +106,7 @@ export default function Home() {
       </button>
       {error && <p className="mt-4 text-red-500">{error}</p>}
       {isChannelMember !== null && !isLoading && (
-        <p className="mt-4 text-xl">
+        <p className="mt-4 text-xl light:text-gray-800 dark:text-gray-100">
           {isChannelMember
             ? "شما عضو کانال هستید"
             : "شما عضو کانال نیستید، دپس از عضویت دوباره تلاش کنید "}
