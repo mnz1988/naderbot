@@ -94,7 +94,7 @@ export default function Home() {
       <Image src={myImageBot} alt="bot" className="mb-4 " width={100} height={100} />
       <h1 className="text-2xl font-bold mb-4 mx-auto light:text-gray-800 dark:text-gray-100 ">برای عضویت در گروه های تخفیفی ویژه نجات غریقان و غواصان استان مرکزی ابتدا در کانال رسمی عضو شوید</h1>
       <p/>
-      <a href='https://t.me/taraah_net' className='light:text-gray-800 dark:text-gray-100'>@markazilifesaving 
+      <a href='https://t.me/taraah_net' className='text-xl font-medium light:text-gray-800 dark:text-gray-100'>@markazilifesaving 
       <span className="inline-flex items-baseline">
       <Image src={myImageExternalLink} alt="link" className="mx-1 size-4 self-center" />
       </span>
