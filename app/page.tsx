@@ -118,7 +118,7 @@ export default function Home() {
       {isChannelMember !== null && !isLoading && (
         <p className="mt-4 text-xl light:text-gray-800 dark:text-gray-100 items-center justify-center">
           {isChannelMember
-            ? "شما عضو کانال هستید"
+            ? <a href='https://t.me/taraah_net'><button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full">ورود به گروه تخفیفات</button></a>
             : "شما عضو کانال نیستید، پس از عضویت دوباره تلاش کنید "}
         </p>
       )}
