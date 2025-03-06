@@ -96,9 +96,8 @@ export default function Home() {
       <p/>
       <a href='https://t.me/taraah_net' className='light:text-gray-800 dark:text-gray-100'>@markazilifesaving 
       </a>
-      <span>
-        <Image src={myImageExternalLink} alt="link" className="mb-4" width={14} height={14} />
-      </span>
+      <Image src={myImageExternalLink} alt="link" className="mb-4" width={14} height={14} />
+      {/* <span></span> */}
       <br/>
       <p className="text-xl light:text-gray-800 dark:text-gray-100">پس از عضویت دکمه بررسی را بزنید</p>
       <br/>
