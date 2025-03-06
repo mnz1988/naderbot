@@ -4,13 +4,13 @@ export async function POST(req: Request) {
     const botToken = process.env.BOT_TOKEN;
 
     if (!botToken) {
-        return NextResponse.json({ error: 'Telegram bot token is missing' }, { status: 500 });
+        return NextResponse.json({ error: 'توکن روبات مشخص نشده است' }, { status: 500 });
     }
 
     const { telegramId, channelUsername } = await req.json();
 
     if (!telegramId || !channelUsername) {
-        return NextResponse.json({ error: 'Invalid request: missing telegramId or channelUsername' }, { status: 400 });
+        return NextResponse.json({ error: 'درخواست نامعتبر: یوزرنیم کاربر یا کانال مشخص نشده است' }, { status: 400 });
     }
 
     try {
@@ -25,8 +25,8 @@ export async function POST(req: Request) {
 
         if (!response.ok) {
             const errorText = await response.text();
-            console.error('Telegram API error:', response.status, errorText);
-            return NextResponse.json({ error: `Telegram API error: ${response.status} ${errorText}` }, { status: 500 });
+            console.error('خطا در ای پی آی تلگرام:', response.status, errorText);
+            return NextResponse.json({ error: `خطا در ای پی آی تلگرام: ${response.status} ${errorText}` }, { status: 500 });
         }
 
         const data = await response.json();
@@ -36,13 +36,13 @@ export async function POST(req: Request) {
             const isMember = ['creator', 'administrator', 'member'].includes(status);
             return NextResponse.json({ isMember });
         } else {
-            return NextResponse.json({ error: `Telegram API returned false: ${JSON.stringify(data)}` }, { status: 500 });
+            return NextResponse.json({ error: ` پاسخ فالس برای ای پی آی تلگرام: ${JSON.stringify(data)}` }, { status: 500 });
         }
     } catch (error) {
-        console.error('Error checking channel membership:', error);
+        console.error('خطا در بررسی عضویت:', error);
         if (error instanceof Error) {
-            return NextResponse.json({ error: `Failed to check channel membership: ${error.message}` }, { status: 500 });
+            return NextResponse.json({ error: `ناموفق در بررسی عضویت: ${error.message}` }, { status: 500 });
         }
-        return NextResponse.json({ error: 'An unknown error occurred while checking channel membership' }, { status: 500 });
+        return NextResponse.json({ error: 'خطایی ناشناخته در زمان بررسی عصویت اتفاق افتاد' }, { status: 500 });
     }
 }

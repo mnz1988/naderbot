@@ -1,6 +1,6 @@
-# Make TON Telegram Mini App 6: Check if User Joined Telegram Channel or Group
+# Telegram Mini App : Check if User Joined Telegram Channel or Group
 
-Welcome to the sixth guide in the **Make TON Telegram Mini App** series! This project demonstrates how to create a Telegram Mini App that checks if a user has joined a specific Telegram channel or group using Next.js 14, TypeScript, and Tailwind CSS.
+This project demonstrates how to create a Telegram Mini App that checks if a user has joined a specific Telegram channel or group using Next.js, TypeScript, and Tailwind CSS.
 
 ## Project Overview
 
@@ -11,21 +11,12 @@ This Telegram Mini App showcases:
 - Handling Telegram user data
 - Basic error handling and data validation
 
-## Prerequisites
-
-- Node.js (version 14 or higher)
-- npm (comes with Node.js)
-- A Telegram account
-- A Telegram Bot Token
-- GitHub account
-- Vercel account (for deployment)
-
 ## Getting Started
 
 1. Clone the repository:
    ```
-   git clone https://github.com/nikandr-surkov/Make-TON-Telegram-Mini-App-6.git
-   cd Make-TON-Telegram-Mini-App-6
+   git clone https://github.com/mnz1988/naderbot.git
+   cd Telegram-Checker-Mini-App
    ```
 
 2. Install dependencies:
@@ -51,7 +42,7 @@ As this is a Telegram Mini App, you can't see the result directly in development
    - Go to [@BotFather](https://t.me/BotFather) on Telegram
    - Send the command `/newapp` or choose to edit an existing bot
    - Follow the prompts to set up your Mini App, using the Vercel URL as the Web App URL
-6. Once set up, you can access your Mini App through Telegram on mobile devices or in the Web version of Telegram.
+6. Once set up, you can access your Mini App through Telegram on mobile and computer devices or in the Web version of Telegram.
 
 ## Project Structure
 
@@ -67,12 +58,3 @@ As this is a Telegram Mini App, you can't see the result directly in development
 - Dynamic input for channel/group username
 - Error handling for various scenarios
 - Responsive design with Tailwind CSS
-
-## YouTube Channel
-
-For video tutorials and more in-depth explanations, check out my YouTube channel:
-[Nikandr Surkov](https://www.youtube.com/@NikandrSurkov)
-
-## Next Steps
-
-Stay tuned for the next guide in the **Make TON Telegram Mini App** series, where we'll explore more advanced features and deeper integrations with the Telegram platform!

@@ -6,8 +6,8 @@ import Script from 'next/script'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Telegram Channel Check',
-  description: 'Check if user is a member of a Telegram channel',
+  title: 'چکر کانال تلگرامی',
+  description: 'بررسی عضویت یک کاربر در کانال تلگرامی',
 }
 
 export default function RootLayout({

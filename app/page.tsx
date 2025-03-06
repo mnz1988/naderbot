@@ -14,7 +14,7 @@ export default function Home() {
   const [isChannelMember, setIsChannelMember] = useState<boolean | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [telegramId, setTelegramId] = useState<string | null>(null)
-  const [channelUsername, setChannelUsername] = useState('')
+  const [channelUsername, setChannelUsername] = useState('@markazilifesaving')
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function Home() {
             setTelegramId(user.id.toString());
           }
         } catch (error) {
-          console.error('Error parsing user data:', error);
+          console.error('خطا در دریافت اطلاعات کاربر:', error);
         }
       }
     }
@@ -36,12 +36,12 @@ export default function Home() {
 
   const checkChannelMembership = async () => {
     if (!telegramId) {
-      alert('This app can only be used within Telegram')
+      alert('این مینی اپ فقط در تلگرام قابلیت اجرا دارد')
       return
     }
 
     if (!channelUsername) {
-      alert('Please enter a channel username')
+      alert('لطفا یوزرنیم کانال را وارد کنید')
       return
     }
 
@@ -60,16 +60,16 @@ export default function Home() {
 
       if (!response.ok) {
         const errorData = await response.json()
-        throw new Error(errorData.error || 'Failed to check membership')
+        throw new Error(errorData.error || 'بررسی عضویت در کانال با خطا مواجه شد')
       }
 
       const data = await response.json()
       setIsChannelMember(data.isMember)
       setError(null)
     } catch (error) {
-      console.error('Error checking channel membership:', error)
+      console.error('خطا در بررسی عضویت در کانال:', error)
       setIsChannelMember(false)
-      setError(error instanceof Error ? error.message : 'An unknown error occurred')
+      setError(error instanceof Error ? error.message : 'خطایی با دلیل نامشخص رخ داد')
     } finally {
       setIsLoading(false)
     }
@@ -78,20 +78,19 @@ export default function Home() {
   if (!telegramId) {
     return (
       <main className="flex min-h-screen flex-col items-center justify-center p-4">
-        <h1 className="text-4xl font-bold mb-8">Telegram Channel Membership Check</h1>
-        <p className="text-xl">This app can only be used within Telegram as a Mini App.</p>
+        <h1 className="text-4xl font-bold mb-8">بررسی عضویت در کانال تلگرامی هیات نجات غریق و غواصی استان مرکزی
+        </h1>
+        <p className="text-xl">این روبات فقط قابلیت استفاده به عنوان مینی اپ تلگرامی را دارد</p>
       </main>
     )
   }
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4">
-      <h1 className="text-4xl font-bold mb-8">Telegram Channel Membership Check</h1>
-      <input
-        type="text"
-        value={channelUsername}
+      <h1 className="text-4xl font-bold mb-8">بررسی عضویت در کانال</h1>
+      <input disabled type="text" value={channelUsername}
         onChange={(e) => setChannelUsername(e.target.value)}
-        placeholder="Enter channel username (e.g., @example)"
+        placeholder="یوزرنیم کانال (مثال: @example)"
         className="mb-4 p-2 border border-gray-300 rounded w-full max-w-xs"
       />
       <button
@@ -99,14 +98,14 @@ export default function Home() {
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         disabled={isLoading || !channelUsername}
       >
-        {isLoading ? 'Checking...' : 'Check Membership'}
+        {isLoading ? 'در حال بررسی...' : 'بررسی عضویت'}
       </button>
       {error && <p className="mt-4 text-red-500">{error}</p>}
       {isChannelMember !== null && !isLoading && (
         <p className="mt-4 text-xl">
           {isChannelMember
-            ? "You are a member of the channel!"
-            : "You are not a member of the channel."}
+            ? "شما عضو کانال هستید"
+            : "شما عضو کانال نیستید"}
         </p>
       )}
     </main>
