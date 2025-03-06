@@ -80,7 +80,7 @@ export default function Home() {
       <main className="flex min-h-screen flex-col items-center justify-center p-4">
         <h1 className="text-4xl font-bold mb-8">بررسی عضویت در کانال تلگرامی هیات نجات غریق و غواصی استان مرکزی
         </h1>
-        <p className="text-xl">این روبات فقط قابلیت استفاده به عنوان مینی اپ تلگرامی را دارد</p>
+        <p className="text-xl">این ربات برای استفاده به عنوان مینی اپ تلگرامی طراحی شده است</p>
       </main>
     )
   }
